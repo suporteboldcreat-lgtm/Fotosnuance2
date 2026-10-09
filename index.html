@@ -6,6 +6,7 @@
   <title>LUME FILMES | Fotografia documental de casamentos em Manaus</title>
   <meta name="description" content="Fotografia documental de casamentos em Manaus, com olhar autoral e estética cinematográfica. Projeto fictício de portfólio da Nuance.">
   <meta name="theme-color" content="#38271F">
+  <link rel="preload" as="image" href="assets/img/hero-poster-1920.webp" fetchpriority="high">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="LUME FILMES | Fotografia documental de casamentos em Manaus">
@@ -16,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -24,16 +26,13 @@
 
     <!-- SEÇÃO 1 — HERO -->
     <section class="hero" aria-labelledby="hero-titulo">
-      <picture class="hero__media">
-        <source media="(max-width: 700px)"
-                srcset="assets/img/hero-mobile-450.webp 450w, assets/img/hero-mobile-900.webp 900w"
-                sizes="100vw">
-        <img src="assets/img/hero-desktop-1920.webp"
-             srcset="assets/img/hero-desktop-960.webp 960w, assets/img/hero-desktop-1920.webp 1920w"
-             sizes="100vw" width="1920" height="1080"
-             fetchpriority="high"
-             alt="Espaço reservado para a fotografia principal: um momento espontâneo do casal, sem pose, em luz baixa e quente.">
-      </picture>
+      <div class="hero__media hero__video" aria-hidden="true">
+        <video id="hero-video" autoplay muted loop playsinline preload="auto"
+               poster="assets/img/hero-poster-1920.webp" width="1920" height="1080"
+               disablepictureinpicture tabindex="-1">
+          <source src="assets/video/hero.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="hero__scrim" aria-hidden="true"></div>
 
       <p class="hero__brand">LUME FILMES</p>
@@ -57,7 +56,7 @@
           <img src="assets/img/manifesto-900.webp"
                srcset="assets/img/manifesto-450.webp 450w, assets/img/manifesto-900.webp 900w"
                sizes="(max-width: 700px) 70vw, 30vw" width="900" height="1200" loading="lazy"
-               alt="Espaço reservado para uma fotografia vertical de detalhe: mãos que se encontram.">
+               alt="Noivos de mãos dadas, em roupas claras, durante a cerimônia.">
         </figure>
       </div>
     </section>
@@ -73,32 +72,30 @@
         <figure class="pf pf--1">
           <img src="assets/img/portfolio-1-1600.webp" srcset="assets/img/portfolio-1-800.webp 800w, assets/img/portfolio-1-1600.webp 1600w"
                sizes="(max-width: 700px) 100vw, 92vw" width="1600" height="900" loading="lazy"
-               alt="Espaço reservado para uma fotografia ampla da cerimônia.">
+               alt="Beijo dos noivos sob cordões de luzes, com os convidados aplaudindo ao fundo.">
         </figure>
         <figure class="pf pf--2">
           <img src="assets/img/portfolio-2-1000.webp" srcset="assets/img/portfolio-2-500.webp 500w, assets/img/portfolio-2-1000.webp 1000w"
                sizes="(max-width: 700px) 80vw, 38vw" width="1000" height="1250" loading="lazy"
-               alt="Espaço reservado para um retrato espontâneo em formato vertical.">
+               alt="Noiva rindo, em um retrato espontâneo à luz quente da noite.">
         </figure>
         <figure class="pf pf--3">
-          <img src="assets/img/portfolio-3-1500.webp" srcset="assets/img/portfolio-3-750.webp 750w, assets/img/portfolio-3-1500.webp 1500w"
-               sizes="(max-width: 700px) 100vw, 52vw" width="1500" height="1000" loading="lazy"
-               alt="Espaço reservado para uma cena de convidados em formato horizontal.">
+          <img src="assets/img/portfolio-3-1224.webp" width="1224" height="816" loading="lazy"
+               alt="Alianças sobre um convite de casamento, entre folhagens.">
         </figure>
         <figure class="pf pf--4">
-          <img src="assets/img/portfolio-4-900.webp" srcset="assets/img/portfolio-4-450.webp 450w, assets/img/portfolio-4-900.webp 900w"
-               sizes="(max-width: 700px) 56vw, 24vw" width="900" height="900" loading="lazy"
-               alt="Espaço reservado para uma fotografia de detalhe em formato quadrado.">
+          <img src="assets/img/portfolio-4-816.webp" width="816" height="816" loading="lazy"
+               alt="Mãos dos noivos se encontrando, com o anel de noivado em destaque.">
         </figure>
         <figure class="pf pf--5">
           <img src="assets/img/portfolio-5-900.webp" srcset="assets/img/portfolio-5-450.webp 450w, assets/img/portfolio-5-900.webp 900w"
                sizes="(max-width: 700px) 72vw, 30vw" width="900" height="1200" loading="lazy"
-               alt="Espaço reservado para uma fotografia vertical de um instante entre os noivos.">
+               alt="Noivos de mãos dadas e olhos fechados, em um momento de oração durante a cerimônia ao ar livre.">
         </figure>
         <figure class="pf pf--6">
           <img src="assets/img/portfolio-6-1600.webp" srcset="assets/img/portfolio-6-800.webp 800w, assets/img/portfolio-6-1600.webp 1600w"
                sizes="(max-width: 700px) 100vw, 70vw" width="1600" height="800" loading="lazy"
-               alt="Espaço reservado para uma fotografia panorâmica da celebração.">
+               alt="Detalhe das mãos dadas dos noivos, em trajes brancos.">
         </figure>
       </div>
 
@@ -122,7 +119,7 @@
       <picture class="abordagem__media">
         <img src="assets/img/abordagem-1920.webp" srcset="assets/img/abordagem-960.webp 960w, assets/img/abordagem-1920.webp 1920w"
              sizes="100vw" width="1920" height="960" loading="lazy"
-             alt="Espaço reservado para uma fotografia ampla, em atmosfera contemplativa, que represente a abordagem documental.">
+             alt="Noivos em um momento de oração e emoção durante a cerimônia ao ar livre.">
       </picture>
       <div class="abordagem__scrim" aria-hidden="true"></div>
       <div class="abordagem__content">
@@ -153,5 +150,20 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script>
+    (function () {
+      var v = document.getElementById('hero-video');
+      if (!v) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { v.removeAttribute('autoplay'); v.pause(); return; }
+      v.muted = true;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {
+        var go = function () { v.play(); };
+        document.addEventListener('touchstart', go, { once: true, passive: true });
+        document.addEventListener('click', go, { once: true });
+      });
+    })();
+  </script>
 </body>
 </html>
